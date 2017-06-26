@@ -30,16 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Create.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Create.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="29" column="18" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="29" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Defer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Defer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -50,51 +40,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Empty.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Empty.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Empty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="12" column="135" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="135" />
+            <state relative-caret-position="200">
+              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Never.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Never.java">
+      <file leaf-file-name="Just.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Just.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="10" column="135" lean-forward="true" selection-start-line="10" selection-start-column="135" selection-end-line="10" selection-end-column="135" />
+            <state relative-caret-position="546">
+              <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Throw.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Throw.java">
+      <file leaf-file-name="Range.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Range.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="10" column="135" lean-forward="false" selection-start-line="10" selection-start-column="135" selection-end-line="10" selection-end-column="135" />
+            <state relative-caret-position="350">
+              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="From.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/From.java">
+      <file leaf-file-name="Timer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Timer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="10" column="135" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="135" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Interval.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Interval.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="18" column="54" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="54" />
+            <state relative-caret-position="48">
+              <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -475,13 +455,18 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/rt.jar!/sun/launcher/LauncherHelper.class" />
         <option value="$PROJECT_DIR$/src/main/java/rxtest/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rxtest/Create.java" />
         <option value="$PROJECT_DIR$/src/main/java/rxtest/Defer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rxtest/Interval.java" />
         <option value="$PROJECT_DIR$/src/main/java/rxtest/From.java" />
         <option value="$PROJECT_DIR$/src/main/java/rxtest/Never.java" />
         <option value="$PROJECT_DIR$/src/main/java/rxtest/Throw.java" />
         <option value="$PROJECT_DIR$/src/main/java/rxtest/Empty.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rxtest/Just.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rxtest/Range.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rxtest/Interval.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rxtest/Create.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rxtest/Repeat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rxtest/Start.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rxtest/Timer.java" />
       </list>
     </option>
   </component>
@@ -801,35 +786,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Throw">
-    <configuration default="false" name="Empty" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="rxtest.Empty" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="rxtest_main" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Never" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="rxtest.Never" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="rxtest_main" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager">
     <configuration default="false" name="Throw" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="rxtest.Throw" />
       <option name="VM_PARAMETERS" />
@@ -844,8 +801,36 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="From" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="rxtest.From" />
+    <configuration default="false" name="Just" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="rxtest.Just" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="rxtest_main" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Range" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="rxtest.Range" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="rxtest_main" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Timer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="rxtest.Timer" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -997,19 +982,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Empty" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Never" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Throw" />
-      <item index="3" class="java.lang.String" itemvalue="Application.From" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Throw" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Just" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Range" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Timer" />
       <item index="4" class="java.lang.String" itemvalue="Application.Interval" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Throw" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Never" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Empty" />
-        <item index="3" class="java.lang.String" itemvalue="Application.From" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Interval" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Timer" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Interval" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Range" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Just" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Throw" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -1241,8 +1226,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Create.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="29" column="18" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="29" selection-end-column="18" />
+        <state relative-caret-position="68">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1255,10 +1240,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Empty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Just.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Range.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Interval.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="18" column="54" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="54" />
+        <state relative-caret-position="250">
+          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1271,14 +1280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Never.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="10" column="135" lean-forward="true" selection-start-line="10" selection-start-column="135" selection-end-line="10" selection-end-column="135" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Throw.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1287,10 +1288,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Empty.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Never.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="12" column="135" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="135" />
+          <caret line="10" column="135" lean-forward="true" selection-start-line="10" selection-start-column="135" selection-end-line="10" selection-end-column="135" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rxtest/Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
           <folding />
         </state>
       </provider>

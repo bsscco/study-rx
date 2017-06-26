@@ -1,31 +1,25 @@
 package rxtest;
 
-import rx.Notification;
 import rx.Observable;
-import rx.Subscriber;
-import rx.Subscription;
-import rx.functions.Action1;
 import rx.schedulers.Schedulers;
-import rx.subscriptions.Subscriptions;
 
-import java.util.concurrent.TimeUnit;
-
-public class Interval {
+public class Just {
 
     public static void main(String[] args) {
         Observable
-                .interval(500, 500, TimeUnit.MILLISECONDS) // 500ms 후부터 500ms마다 onNext
+//                .just(new Integer[]{1, 2, 3}) // 이렇게 넣으면 배열 객체 자체를 하나의 each로 간주합니다.
+                .just(1, 2, 3)
                 .doOnEach(notification -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tEach: " + notification))
                 .subscribeOn(Schedulers.computation())
                 .observeOn(Schedulers.io())
                 .map(item -> {
                     System.out.println("Thread:" + Thread.currentThread().getName() + "\tMap: " + item);
-                    return item * item;
+                    return item + " is mapped value";
                 })
                 .observeOn(Schedulers.newThread())
                 .doOnNext(item -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonNext: " + item))
                 .observeOn(Schedulers.io())
-                .doOnCompleted(() -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonCompleted")) // 호출되지 않습니다.
+                .doOnCompleted(() -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonCompleted"))
                 .observeOn(Schedulers.computation())
                 .doOnError(e -> System.err.println("Thread:" + Thread.currentThread().getName() + "\tonError: " + e.getMessage()))
                 .subscribe();

@@ -1,20 +1,16 @@
 package rxtest;
 
-import rx.Notification;
 import rx.Observable;
-import rx.Subscriber;
 import rx.Subscription;
-import rx.functions.Action1;
 import rx.schedulers.Schedulers;
-import rx.subscriptions.Subscriptions;
 
 import java.util.concurrent.TimeUnit;
 
-public class Interval {
+public class Timer {
 
     public static void main(String[] args) {
         Observable
-                .interval(500, 500, TimeUnit.MILLISECONDS) // 500ms 후부터 500ms마다 onNext
+                .timer(500, TimeUnit.MILLISECONDS)
                 .doOnEach(notification -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tEach: " + notification))
                 .subscribeOn(Schedulers.computation())
                 .observeOn(Schedulers.io())
