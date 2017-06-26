@@ -10,6 +10,7 @@ public class Empty {
     public static void main(String[] args) {
         Observable
                 .empty()
+                .doOnEach(notification -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tEach: " + notification))
                 .subscribeOn(Schedulers.io())
                 .doOnNext(item -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonNext: " + item)) // 호출되지 않습니다.
                 .doOnCompleted(() -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonCompleted"))
