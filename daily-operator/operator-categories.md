@@ -28,7 +28,7 @@ Observable의 오류 알림으로부터 회복을 돕습니다.
 <br>
 <br>
 
-### Observable, 항목에 대한 조건적 연산자
+### Observable과 항목에 대한 조건적 연산자
 하나 또는 여러 개의 Observable 또는 항목들을 평가합니다.
 <br>
 <br>
@@ -38,12 +38,12 @@ Observable이 발생시키는 모든 항목들에 대해 연산합니다.
 <br>
 <br>
 
-### 배압 연산자
+### Observable 배압 연산자
 Observable이 발생시키는 속도에 비해 Observer가 느리게 소비하는 경우를 해결하는 데 도움이 됩니다.
 <br>
 <br>
 
-### 연결 가능한 연산자
+### Observable 연결 가능한 연산자
 정밀하게 제어되는 구족자 역학을 가지는 Observable을 만들어냅니다.
 <br>
 <br>
