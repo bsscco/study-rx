@@ -3,7 +3,7 @@
 <br>
 <br>
 
-### Observable 변형 연산자
+### 항목 변형 연산자
 Obervable에 의해 발생되는 항목들을 변형합니다.
 <br>
 <br>
