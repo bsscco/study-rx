@@ -1,21 +1,22 @@
 package rxtest;
 
 import rx.Observable;
+import rx.Scheduler;
 import rx.functions.Func1;
+import rx.observables.GroupedObservable;
 import rx.schedulers.Schedulers;
 
-import java.util.List;
 
-public class FlatMap {
+public class GroupBy {
 
     public static void main(String[] args) {
         Observable
-                .create((Observable.OnSubscribe<Integer[]>) observer -> {
+                .create((Observable.OnSubscribe<Integer>) observer -> {
                     System.out.println("Thread:" + Thread.currentThread().getName() + "\tEmit items.");
                     try {
                         if (!observer.isUnsubscribed()) {
                             for (int i = 1; i <= 5; i++) {
-                                observer.onNext(new Integer[]{1, 2});
+                                observer.onNext(i);
                             }
                             observer.onCompleted();
                         }
@@ -24,21 +25,23 @@ public class FlatMap {
                     }
                 })
                 .observeOn(Schedulers.io())
-                .doOnEach(notification -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tEachBeforeFlatMap: " + notification))
-                .observeOn(Schedulers.newThread())
-                .flatMap(new Func1<Integer[], Observable<Integer>>() {
+                .doOnEach(notification -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tEachBeforeGroupBy: " + notification))
+                .observeOn(Schedulers.computation())
+                .groupBy(new Func1<Integer, Boolean>() {
                     @Override
-                    public Observable<Integer> call(Integer[] ints) {
-                        return Observable.from(ints);
+                    public Boolean call(Integer item) {
+                        return item % 2 == 0; /*짝수그룹, 홀수그룹으로 나눕니다.*/
                     }
                 })
-                .doOnEach(notification -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tEachAfterFlatMap: " + notification))
-                .subscribeOn(Schedulers.computation())
+                .doOnEach(notification -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tEachAfterGroupBy: " + notification))
                 .observeOn(Schedulers.io())
-                .map((Integer item) -> {
-                    System.out.println("Thread:" + Thread.currentThread().getName() + "\tMap: " + item);
-                    return item * item;
+                .flatMap(new Func1<GroupedObservable<Boolean, Integer>, Observable<Integer>>() {
+                    @Override
+                    public Observable<Integer> call(GroupedObservable<Boolean, Integer> booleanIntegerGroupedObservable) {
+                        return booleanIntegerGroupedObservable;
+                    }
                 })
+                .subscribeOn(Schedulers.computation())
                 .observeOn(Schedulers.newThread())
                 .doOnNext((Integer item) -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonNext: " + item))
                 .observeOn(Schedulers.io())
