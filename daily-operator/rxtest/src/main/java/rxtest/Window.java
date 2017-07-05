@@ -1,18 +1,16 @@
 package rxtest;
 
 import rx.Observable;
-import rx.Subscription;
-import rx.schedulers.Schedulers;
 
-import java.util.concurrent.TimeUnit;
 
-public class Timer {
+public class Window {
 
     public static void main(String[] args) {
         Observable
-                .timer(1000, TimeUnit.MILLISECONDS)
+                .range(1, 5)
+                .window(2, 4)
                 .subscribe(
-                        item -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonNext: " + item),
+                        item -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonNext: " + item), // scan()의 첫인자였던 initialValue부터 발생됩니다.
                         e -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonError: " + e.getMessage()),
                         () -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonCompleted")
                 );
