@@ -14,24 +14,18 @@ public class Interval {
 
     public static void main(String[] args) {
         Observable
-                .interval(500, 500, TimeUnit.MILLISECONDS) // 500ms 후부터 500ms마다 onNext
-                .doOnEach(notification -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tEach: " + notification))
-                .subscribeOn(Schedulers.computation())
-                .observeOn(Schedulers.io())
-                .map(item -> {
-                    System.out.println("Thread:" + Thread.currentThread().getName() + "\tMap: " + item);
-                    return item * item;
-                })
-                .observeOn(Schedulers.newThread())
-                .doOnNext(item -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonNext: " + item))
-                .observeOn(Schedulers.io())
-                .doOnCompleted(() -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonCompleted")) // 호출되지 않습니다.
-                .observeOn(Schedulers.computation())
-                .doOnError(e -> System.err.println("Thread:" + Thread.currentThread().getName() + "\tonError: " + e.getMessage()))
-                .subscribe();
+                .interval(1000, 500, TimeUnit.MILLISECONDS) // 1000ms 후부터 500ms마다 onNext
+                .subscribe(
+                        item -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonNext: " + item),
+                        e -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonError: " + e.getMessage()),
+                        () -> {
+                            // 아이템을 무한히 발생시키므로 onCompleted는 호출될 일이 없습니다.
+                            System.out.println("Thread:" + Thread.currentThread().getName() + "\tonCompleted");
+                        }
+                );
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

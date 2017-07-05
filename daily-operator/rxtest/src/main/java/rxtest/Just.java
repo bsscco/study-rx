@@ -9,20 +9,11 @@ public class Just {
         Observable
 //                .just(new Integer[]{1, 2, 3}) // 이렇게 넣으면 배열 객체 자체를 하나의 each로 간주합니다.
                 .just(1, 2, 3)
-                .doOnEach(notification -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tEach: " + notification))
-                .subscribeOn(Schedulers.computation())
-                .observeOn(Schedulers.io())
-                .map(item -> {
-                    System.out.println("Thread:" + Thread.currentThread().getName() + "\tMap: " + item);
-                    return item + " is mapped value";
-                })
-                .observeOn(Schedulers.newThread())
-                .doOnNext(item -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonNext: " + item))
-                .observeOn(Schedulers.io())
-                .doOnCompleted(() -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonCompleted"))
-                .observeOn(Schedulers.computation())
-                .doOnError(e -> System.err.println("Thread:" + Thread.currentThread().getName() + "\tonError: " + e.getMessage()))
-                .subscribe();
+                .subscribe(
+                        item -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonNext: " + item),
+                        e -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonError: " + e.getMessage()),
+                        () -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonCompleted")
+                );
 
         try {
             Thread.sleep(2000);

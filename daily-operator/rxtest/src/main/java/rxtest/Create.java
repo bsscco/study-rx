@@ -1,6 +1,7 @@
 package rxtest;
 
 import rx.Observable;
+import rx.Observable.OnSubscribe;
 import rx.Observer;
 import rx.Subscription;
 import rx.schedulers.Schedulers;
@@ -9,7 +10,7 @@ public class Create {
 
     public static void main(String[] args) {
         Observable
-                .create((Observable.OnSubscribe<Integer>) observer -> {
+                .create((OnSubscribe<Integer>) observer -> {
                     System.out.println("Thread:" + Thread.currentThread().getName() + "\tEmit items.");
                     try {
                         if (!observer.isUnsubscribed()) {
@@ -22,12 +23,7 @@ public class Create {
                         observer.onError(e);
                     }
                 })
-                .subscribeOn(Schedulers.computation())
-                .observeOn(Schedulers.io())
-                .map(item -> {
-                    System.out.println("Thread:" + Thread.currentThread().getName() + "\tMap: " + item);
-                    return item * item;
-                })
+                .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.computation())
                 .subscribe(new Observer<Integer>() {
                     @Override
