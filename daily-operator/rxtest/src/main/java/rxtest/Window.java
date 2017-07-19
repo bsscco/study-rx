@@ -2,6 +2,9 @@ package rxtest;
 
 import rx.Observable;
 
+import java.lang.reflect.Array;
+import java.util.regex.Pattern;
+
 
 public class Window {
 
@@ -10,15 +13,17 @@ public class Window {
                 .range(1, 5)
                 .window(2, 4)
                 .subscribe(
-                        item -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonNext: " + item), // scan()의 첫인자였던 initialValue부터 발생됩니다.
+                        (Observable<Integer> item) -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonNext: " + item),
                         e -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonError: " + e.getMessage()),
                         () -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonCompleted")
                 );
+
 
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
     }
 }

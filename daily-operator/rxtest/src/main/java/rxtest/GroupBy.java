@@ -14,7 +14,7 @@ public class GroupBy {
                 .range(1, 10)
                 .groupBy(item -> item % 3)
                 .subscribe(
-                        item -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonNext: " + item),
+                        (GroupedObservable<Integer, Integer> item) -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonNext: " + item),
                         e -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonError: " + e.getMessage()),
                         () -> System.out.println("Thread:" + Thread.currentThread().getName() + "\tonCompleted")
                 );
