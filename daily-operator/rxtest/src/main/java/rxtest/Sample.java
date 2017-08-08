@@ -1,7 +1,11 @@
 package rxtest;
 
+import com.sun.jndi.toolkit.url.Uri;
+import com.sun.jndi.toolkit.url.UrlUtil;
 import rx.Observable;
+import sun.net.util.URLUtil;
 
+import java.net.URI;
 import java.util.concurrent.TimeUnit;
 
 
